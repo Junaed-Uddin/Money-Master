@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Money Master</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'moneyImage': "url('./images/1.jpg')",
+                    },
+                    fontFamily: {
+                        'poppins':['Poppins', 'sans-serif']
+                    },
+                    screens: {
+                        'xs': '430px',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-poppins">
+    <h2 class="text-4xl text-center my-5 text-yellow-500 font-bold">Money Master</h2>
+    <div class="grid lg:grid-cols-2 lg:gap-8 mx-auto p-2 lg:p-0 lg:w-9/12 h-full text-white text-center">
+        <div class="card my-5">
+            <img src="./images/1.jpg" class="max-w-full h-full object-cover object-center" alt="..." />
+        </div>
+        <div class="card bg-base-100 shadow-xl w-full border border-1 sm:my-5">
+            <div class="card-body h-full px-3 xs:px-5 pt-3 xs:pt-6 pb-4">
+                <div class="form-control w-full">
+                    <h2 class="text-2xl text-yellow-500 font-bold">Income</h2>
+                    <label class="label">
+                        <span class="label-text text-lg text-white">Income:</span>
+                        <input id="income-field" type="text" placeholder="Type here"
+                            class="input input-bordered w-full ml-4 mt-2" />
+                    </label>
+                    <h2 class="text-2xl mt-3 text-yellow-500 font-bold">Expenses</h2>
+                    <label class="label">
+                        <span class="label-text text-lg text-white">Food:</span>
+                        <input id="food-field" type="text" placeholder="Type here"
+                            class="input input-bordered w-full ml-8 mt-2" />
+                    </label>
+                    <label class="label">
+                        <span class="label-text text-lg text-white">Rent:</span>
+                        <input id="rent-field" type="text" placeholder="Type here"
+                            class="input input-bordered w-full ml-9 mt-2" />
+                    </label>
+                    <label class="label">
+                        <span class="label-text text-lg text-white">Clothes:</span>
+                        <input id="clothes-field" type="text" placeholder="Type here"
+                            class="input input-bordered w-full ml-3 mt-2" />
+                    </label>
+                    <button id="calculate-btn"
+                        class="px-3 py-2 text-center font-bold rounded-lg text-black bg-yellow-500 mt-4">Calculate</button>
+                    <label class="label text-center mt-5">
+                        <span class="label-text text-lg text-white">Total Expenses:</span>
+                        <span id="total-expense">0</span>
+                    </label>
+                    <label class="label text-center mt-1">
+                        <span class="label-text text-lg text-white">Balance:</span>
+                        <span id="balance">0</span>
+                    </label>
+                    <div class="xs:flex justify-center items-center mt-3 ml-1">
+                        <span class="label-text text-lg text-white text-left">Save:</span>
+                        <input id="saving-field" type="text" placeholder="Type here"
+                            class="input input-bordered xs:ml-3 w-full mt-3 xs:mt-0" />
+                        <span class="mx-3 hidden xs:block">%</span>
+                        <button id="save"
+                            class="px-4 py-2 mt-3 xs:mt-0 text-center font-bold rounded-lg text-black bg-yellow-500">Save</button>
+                    </div>
+                    <label class="label mt-4">
+                        <span class="label-text text-lg text-white break-words">Saving Amount:</span>
+                        <span id="saving-amount">0</span>
+                    </label>
+                    <label class="label">
+                        <span class="label-text text-lg text-white">Remaining Balance:</span>
+                        <span id="current-balance">0</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
